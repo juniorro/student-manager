@@ -64,12 +64,12 @@
 									<td th:text="${student.lastName}"></td>
 									<td th:text="${student.email}"></td>
 									<td th:text="${student.gender}"></td>
-									<td th:text="${student.photo}"></td>
+									<td> <img th:src="@{getPhotoProfile(id=${student.id})}" width="100" height="100"></img></td>
 									<td th:text="${student.dateOfBirth}"></td>
-									<td align="center"><a class="btn btn-default"> <em
-											class="fa fa-pencil"></em>
-									</a> <a class="btn btn-danger"> <em class="fa fa-trash"></em>
-									</a></td>
+									<td align="center">
+										<a th:href="@{edit(id=${student.id})}" class="btn btn-default"> <em	class="fa fa-pencil"></em></a>
+									 	<a onclick="return confirm('Are you sure you want to delete?')" th:href="@{delete(id=${student.id})}" class="btn btn-danger"> <em class="fa fa-trash"></em></a>
+									</td> 
 								</tr>
 							</tbody>
 						</table>

@@ -21,9 +21,9 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
 	@Query("SELECT student FROM Student student WHERE student.dateOfBirth > :x AND student.dateOfBirth < :y")
 	public Student findByDob(@Param("x") Date date1, @Param("x") Date date2);
 	
-	@Modifying
+/*	@Modifying
 	@Transactional
 	@Query("UPDATE Student student SET student.firstName = :v, student.lastName = :w, student.email = :x, student.dateOfBirth = :y WHERE student.id like :z")
-	public void updateStudent(@Param("v") String firstName, @Param("w") String lastName, @Param("x") String email,
-			@Param("y") Date dateOfBirth, @Param("z") Long id);
+	public Student updateStudent(@Param("z") Long id, @Param("v") String firstName, @Param("w") String lastName, @Param("x") String email,
+			@Param("y") Date dateOfBirth);*/
 }

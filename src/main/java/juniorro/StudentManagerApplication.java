@@ -26,6 +26,7 @@ public class StudentManagerApplication {
 		
 		// adding some students
 		
+		/*studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
 		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
 		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
 		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
@@ -82,8 +83,7 @@ public class StudentManagerApplication {
 		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
 		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
 		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-
+*/
 		// removing two students by passing the ID as defined in the repository of type long (we cast the int to long)
 //		studentRepository.delete((long) 1);
 //		studentRepository.delete((long) 3);
