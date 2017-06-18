@@ -38,7 +38,7 @@ public class StudentController {
 	@RequestMapping(value = "/students")
 	public String index(Model model, @RequestParam(name = "page", defaultValue = "0") int page,
 			@RequestParam(name = "name", defaultValue = "") String name) {
-		Page<Student> students = studentRepository.findByFirstName("%" + name + "%", new PageRequest(page, 10));
+		Page<Student> students = studentRepository.findByFirstName("%" + name + "%", new PageRequest(page, 6));
 		int pagesNum = students.getTotalPages();
 		int[] thePages = new int[pagesNum];
 		for (int i = 0; i < pagesNum; i++)
@@ -83,20 +83,20 @@ public class StudentController {
 		return IOUtils.toByteArray(new FileInputStream(photo));
 
 	}
-	
+
 	@RequestMapping(value = "/delete", method = RequestMethod.GET)
 	public String deleteStudent(Long id) {
 		studentRepository.delete(id);
 		return "redirect:students";
 	}
-	
+
 	@RequestMapping(value = "/edit")
 	public String editStudent(Model model, Long id) {
 		Student student = studentRepository.getOne(id);
 		model.addAttribute("student", student);
 		return "edit";
 	}
-	
+
 	@RequestMapping(value = "/updateStudent", method = RequestMethod.POST)
 	public String updateStud(@Valid Student student, BindingResult bindingResult,
 			@RequestParam(name = "pic") MultipartFile filePhoto) throws IllegalStateException, IOException {

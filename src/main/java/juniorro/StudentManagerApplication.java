@@ -22,97 +22,20 @@ public class StudentManagerApplication {
 		StudentRepository studentRepository = context.getBean(StudentRepository.class);
 		
 		// formatting the date
-		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		
-		// adding some students
-		
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");		
 		/*studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-		studentRepository.save(new Student("Mary", "Cloe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
-*/
-		// removing two students by passing the ID as defined in the repository of type long (we cast the int to long)
-//		studentRepository.delete((long) 1);
-//		studentRepository.delete((long) 3);
-		
-		// Getting all the students from the database
+		studentRepository.save(new Student("John", "Doe", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));		
+		studentRepository.save(new Student("Jessica", "Williams", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
+		studentRepository.save(new Student("Mackendy", "Burks", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));
+		studentRepository.save(new Student("Micheal", "Pence", "john@doe.com", "Female", "photo1", dateFormat.parse("1992-02-10")));*/
+
 		List<Student> listStu = studentRepository.findAll();
 		
 		System.out.println("-------------Printing All The Students-------------");
 		
 		for (Student studentList : listStu){
 			System.out.println(studentList);
-		}
-		
-		//Student getbyName = studentRepository.findByFirstName("Demian");
-		
-		//System.out.println("Student get by name is: " + getbyName);
-		
-		// Get the student whose ID is 2 in the database
-//		Student getOneStudent = (Student) studentRepository.findOne((long) 2);
-//		
-//		System.out.println("----------Printing One student From The Database-----------------");
-//		System.out.println(getOneStudent);
-		
-		//studentRepository.updateStudent("Gesner", "Lamour", "lamo@g.com", dateFormat.parse("12-02-1988"), (long)5);
-		
-//		Page<Student> pageStudent = studentRepository.findAll(new PageRequest(0, 3));
-//		
-//		pageStudent.forEach(e->System.out.println(e.getFirstName()));
-				
+		}				
 	
 	}
 }
