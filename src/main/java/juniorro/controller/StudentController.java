@@ -26,7 +26,6 @@ import juniorro.entity.Student;
 import juniorro.repository.StudentRepository;
 
 @Controller
-@RequestMapping(value = "/home")
 public class StudentController {
 	;
 	@Autowired
@@ -35,7 +34,7 @@ public class StudentController {
 	@Value("${image.dir}")
 	private String imageDir;
 
-	@RequestMapping(value = "/students")
+	@RequestMapping(value = "/")
 	public String index(Model model, @RequestParam(name = "page", defaultValue = "0") int page,
 			@RequestParam(name = "name", defaultValue = "") String name) {
 		Page<Student> students = studentRepository.findByFirstName("%" + name + "%", new PageRequest(page, 6));
